@@ -1,0 +1,31 @@
+{
+  "name": "@donorhq/brand",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "description": "The mark, the colours, and the generator that draws every DonorHQ brand.",
+  "packageManager": "pnpm@10.0.0",
+  "scripts": {
+    "country": "node add-country.mjs",
+    "assets:all": "node make-assets.mjs",
+    "assets:marks": "node marks/make-assets.mjs",
+    "assets:general": "node general/make-assets.mjs",
+    "assets:serbia": "node countries/serbia/make-assets.mjs",
+    "test": "node --test",
+    "lint": "oxlint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "oxlint": "^1.15.0",
+    "playwright": "^1.63.0",
+    "prettier": "^3.6.2"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": false,
+    "semi": true,
+    "trailingComma": "all"
+  }
+}
